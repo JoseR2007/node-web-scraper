@@ -4,7 +4,7 @@
   "description": "Web scraper with nodejs and playwright",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js -t"
+    "start": "node index.mjs"
   },
   "keywords": [
     "Nodejs",
