@@ -5,6 +5,7 @@
 > El web scraping es una tecnica que en algunos sitios webs puede ser ilegal, por lo que se recomienda hacer esto con web propias o con permiso del propietario de la misma.
 
 **Instalacion**
+
 Usted necesitara de un manejador de paquetes de Nodejs (npm, pnpm, bun).
 El programa maneja 3 dependencias:
 
@@ -22,6 +23,7 @@ Cada una comple una funcion dentro del ciclo de ejecucion explicado mas adelante
 
 
 **Funcionamiento**
+
 Una vez usted ejecute el comando de inicio ```npm run index.mjs``` o ```npm run start``` (esto asumiendo que usa npm en caso de que use otro la forma de ejecucion no cambia muchom puede verifiar en la documentacion de su manejador de paquetes), se le pedira que inserte cierta informacion.
 
 - Insert URL (inserte la url de la web)
@@ -29,7 +31,7 @@ Una vez usted ejecute el comando de inicio ```npm run index.mjs``` o ```npm run 
 
 Deberia ver algo mas o menos asi:
 <img src="./src/example_for_readme.png" style="border-radius: 0.2em">
-
+<br/>
 La seguna pregunta le cuestion que quiere hacer en la web, las opciones van desde tomar una screenshot hasta extraer todo el contenido HTML **(sin estilos)**.
 
 **extract-html**
