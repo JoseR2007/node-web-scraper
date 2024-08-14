@@ -1,0 +1,24 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "Web scraper with nodejs and playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js -t"
+  },
+  "keywords": [
+    "Nodejs",
+    "playwright",
+    "cli"
+  ],
+  "author": "JoseR2007",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "10.1.8",
+    "picocolors": "1.0.1",
+    "playwright": "1.46.0"
+  },
+  "devDependencies": {
+    "semistandard": "^17.0.0"
+  }
+}
