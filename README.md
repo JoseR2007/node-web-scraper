@@ -30,8 +30,8 @@ Una vez usted ejecute el comando de inicio ```npm run index.mjs``` o ```npm run 
 - What do you want to do? (¿Que quieres hacer?)
 
 Deberia ver algo mas o menos asi:
-<img src="./src/example_for_readme.png" style="border-radius: 0.2em">
-<br/>
+![example](./src/example_for_readme.png)
+
 La seguna pregunta le cuestion que quiere hacer en la web, las opciones van desde tomar una screenshot hasta extraer todo el contenido HTML **(sin estilos)**.
 
 **extract-html**
