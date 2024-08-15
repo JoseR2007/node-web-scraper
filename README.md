@@ -38,3 +38,11 @@ Deberia ver algo mas o menos asi:
 La seguna pregunta le cuestion que quiere hacer en la web, las opciones van desde tomar una screenshot hasta extraer todo el contenido HTML **(sin estilos)**.
 
 **extract-html**
+
+Si usted decide hacer una extraccion del contenido HTML de la pagina señalada debera tener en cuenta que el tiempo de ejecucion puede prologarse dependiendo la complejidad de la pagina.
+
+Una vez el proceso inicie se accedera a la URL especificada y me diante la funcion ```page.content()``` de playWright se extraera el contenido HTML, luego se guardara en un archivo ```.html``` en una carpeta llamada 'saved' en la carpeta raiz del proyecto. Dicha carpeta (saved) no esta incluida en el repositorio, pero una vez usted ejecute el programa, recivira una alerta y posteriormente se creara la carpeta antes mencionada (por lo que usted no tiene que preocuparse por la existencia de esta carpeta).
+
+**processName function**
+
+Dentro del archivo ```src\functions.mjs``` existe una funcion llamada processName, la misma se encarga de procesar el dominio de la pagina transformando todo a minusculas y reemplazando los espacios por '_', para posteriormente ser usada en el archivo de guardado correspondiente (sea ```.png``` a la hora de tomar screeshot, como ```.html``` a la hora de extraer este contenido).
