@@ -1,7 +1,7 @@
 {
   "name": "web-scraper",
   "version": "1.0.0",
-  "description": "Web scraper with nodejs and playwright",
+  "description": "Web scraping with nodejs and playwright",
   "main": "index.js",
   "scripts": {
     "start": "node index.mjs"
