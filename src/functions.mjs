@@ -53,3 +53,23 @@ export async function screenshot (url, root) {
   await browser.close();
   console.log({ web: domain, webUrl: url, action: 'take screeshot', finish: true });
 }
+
+export async function extractElementsHtml (url, root, element) {
+  createDir(root);
+  await page.goto(url);
+
+  const domain = processDomain(await page.title());
+  const elements = await page.locator(element).allTextContents();
+  const content = {
+    web: domain,
+    tag: element,
+    content: elements,
+    finish: true
+  };
+  console.log('\n');
+
+  await page.close();
+  await browser.close();
+
+  console.log(content);
+}
