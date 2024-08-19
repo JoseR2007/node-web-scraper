@@ -6,11 +6,11 @@ import pc from 'picocolors';
 const browser = await firefox.launch();
 const page = await browser.newPage();
 
-const processName = (name) => {
+const processDomain = (name) => {
   if (!name.includes(' ')) return name.toLowerCase();
-  const processedName = name.toLowerCase().replace(/ /g, '_');
+  const processedDomain = name.toLowerCase().replace(/ /g, '_');
 
-  return processedName;
+  return processedDomain;
 };
 
 function createDir (root) {
@@ -31,7 +31,7 @@ export async function extrator (url, root) {
   console.log('Extracting the HTML from a page can take a long time depending on its size...\n');
   await page.goto(url);
   const htmlPromise = page.content();
-  const domian = processName(await page.title());
+  const domian = processDomain(await page.title());
   const fullpath = path.join(root, 'saved', `${domian}.html`);
 
   const html = await htmlPromise;
@@ -46,7 +46,7 @@ export async function screenshot (url, root) {
   createDir(root);
   await page.goto(url);
 
-  const domain = processName(await page.title());
+  const domain = processDomain(await page.title());
   const fullpath = path.join(root, 'saved', `${domain}.png`);
   await page.screenshot({ path: fullpath, fullPage: true });
 
