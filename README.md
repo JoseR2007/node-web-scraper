@@ -5,17 +5,14 @@
 > El web scraping es una técnica que en algunos sitios webs puede ser ilegal, por lo que se recomienda hacer esto con webs propias o con permiso del propietario de la misma.
 
 ## Tabla de contenido
----
-
-[Instalacion](#instalacion)
-[Funcionamiento](#funcionamiento)
+- [Instalacion](#instalacion)
+- [Funcionamiento](#funcionamiento)
 - [extract-html](#extract-html)
 - [processDomain Function](#processdomain-function)
 - [extract-element](#extract-element)
 
 
 ### Instalacion
----
 
 Usted necesitara de un manejador de paquetes de Nodejs (npm, pnpm, bun).
 El programa maneja 3 dependencias:
@@ -34,7 +31,6 @@ Cada una cumple una función dentro del ciclo de ejecución explicado más adela
 
 
 ### Funcionamiento
----
 
 Una vez usted ejecute el comando de inicio ```npm run index.mjs``` o ```npm run start``` (esto asumiendo que usa NPM en caso de que use otro la forma de ejecución no cambia mucho, puede verificar en la documentación de su manejador de paquetes), se le pedirá que inserte cierta información.
 
@@ -50,19 +46,16 @@ Debería ver algo más o menos así:
 La segunda pregunta le cuestiona que quiere hacer en la web, las opciones van desde tomar un screenshot hasta extraer todo el contenido HTML **(sin estilos)**.
 
 ### extract-html
----
 
 Si usted decide hacer una extracción del contenido HTML de la página señalada, deberá tener en cuenta que el tiempo de ejecución puede prologarse dependiendo la complejidad de la página.
 
 Una vez el proceso inicié se accederá a la URL especificada y mediante la función ```page.content()``` de playWright se extraerá el contenido HTML, luego se guardará en un archivo ```.html``` en una carpeta llamada 'saved' en la carpeta raíz del proyecto. Dicha carpeta (saved) no está incluida en el repositorio, pero una vez usted ejecute el programa, recibirá una alerta y posteriormente se creará la carpeta antes mencionada (por lo que usted no tiene que preocuparse por la existencia de esta carpeta).
 
 ### processDomain function
----
 
 Dentro del archivo ```src\functions.mjs``` existe una función llamada processName, la misma se encarga de procesar el dominio de la página transformando todo a minúsculas y reemplazando los espacios por '_', para posteriormente ser usada en el archivo de guardado correspondiente (sea ```.png``` a la hora de tomar screeshot, como ```.html``` a la hora de extraer este contenido).
 
 ### extract-element
----
 
 Si usted desea extraer elementos de una página web puede hacerlo con esta opción, la misma navegará a la URL especificada e inmediatamente después empezará a recolectar el texto dentro de estos elementos. Solo debe proporcionar el tipo de elemento, por ejemplo 'p' para hacer referencia a una etiqueta de tipo párrafo.
 
