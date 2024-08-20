@@ -46,3 +46,17 @@ Una vez el proceso inicié se accederá a la URL especificada y mediante la func
 **processName function**
 
 Dentro del archivo ```src\functions.mjs``` existe una función llamada processName, la misma se encarga de procesar el dominio de la página transformando todo a minúsculas y reemplazando los espacios por '_', para posteriormente ser usada en el archivo de guardado correspondiente (sea ```.png``` a la hora de tomar screeshot, como ```.html``` a la hora de extraer este contenido).
+
+**extract-element**
+
+Si usted desea extraer elementos de una página web puede hacerlo con esta opción, la misma navegará a la URL especificada e inmediatamente después empezará a recolectar el texto dentro de estos elementos. Solo debe proporcionar el tipo de elemento, por ejemplo 'p' para hacer referencia a una etiqueta de tipo párrafo.
+
+Extraer elementos con base en un atributo:
+Además de poder especificar el tipo de elemento, también puede especificar atributos, organizando su respuesta de la siguiente manera.
+
+- Clases: Supongamos que desea extraer un elemento de tipo párrafo con una clase denominada 'parrafo', puede hacerlo de la siguiente manera: ```p[class="parrafo"]```. Reemplazando la palabra 'parrafo' por el nombre de la clase.
+
+- Id: Ahora, supongamos que el atributo del elemento que desea extraer es un ID, ¿Qué puede hacer? Observe el siguiente ejemplo:
+```p[id="identificador"]```. Reemplazando la palabra 'identificador' por el ID del elemento.
+
+¿Lo noto? Estas formas de hacer referencia al **id** y a la **clase** ¡son muy similares! Eso es por una razón, así como puede hacer referencia a la clase encerrando el atributo [class](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) junto a su valor, ¡también puede hacer lo mismo con otros atributos! He aquí algunos ejemplos:

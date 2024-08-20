@@ -59,6 +59,18 @@ export async function extractElementsHtml (url, root, element) {
   await page.goto(url);
 
   const domain = processDomain(await page.title());
+  if (!(await page.$$(element)).length) {
+    console.log({
+      web: domain,
+      tag: element,
+      message: 'Element not found in this page',
+      finish: false
+    });
+
+    await page.close();
+    await browser.close();
+    process.exit(1);
+  }
   const elements = await page.locator(element).allTextContents();
   const content = {
     web: domain,
@@ -66,7 +78,6 @@ export async function extractElementsHtml (url, root, element) {
     content: elements,
     finish: true
   };
-  console.log('\n');
 
   await page.close();
   await browser.close();
