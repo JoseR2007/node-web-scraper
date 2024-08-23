@@ -19,7 +19,10 @@ function createDir (root) {
     if (err) console.log(err);
     if (!files.includes('saved')) {
       mkdir(fullPath, (err) => {
-        if (err) console.log(err);
+        if (err) {
+          console.log(`${pc.red('Fatal Error: ')} Failed to create save directory`);
+          process.exit(1);
+        }
       });
       console.log(`${pc.yellow('Warning:')} Save directory not found \n${pc.green('A new one has been created...')}\n`);
     }
@@ -36,7 +39,10 @@ export async function extrator (url, root) {
 
   const html = await htmlPromise;
   await writeFile(fullpath, html, (err) => {
-    if (err) console.log(err);
+    if (err) {
+      console.log(`${pc.red('Fatal Error: ')} Could not save HTML content`);
+      process.exit(1);
+    }
   });
   await browser.close();
   console.log({ web: domian, webUrl: url, action: 'extract html', finish: true });
