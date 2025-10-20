@@ -14,9 +14,9 @@
   "author": "JoseR2007",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "10.1.8",
+    "inquirer": "12.10.0",
     "picocolors": "1.0.1",
-    "playwright": "1.46.0"
+    "playwright": "1.55.1"
   },
   "devDependencies": {
     "semistandard": "^17.0.0"
